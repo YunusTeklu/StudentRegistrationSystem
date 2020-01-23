@@ -1,0 +1,68 @@
+﻿@model IEnumerable<StudentRegistrationSystem.Models.Student>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Students</h2>
+
+<p>
+    @Html.ActionLink("Register New Student", "Create", null, new { @class = "btn btn-primary" })
+</p>
+<table id="studentsList" class="table table-hover table-striped table-responsive-sm">
+    <thead class="thead-dark">
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.firstName)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.fatherName)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.grandFatherName)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.age)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.gender)
+            </th>
+            
+        </tr>
+    </thead>
+    
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr onclick="window.location='@Url.Action("Details", new { id= item.id} )'">
+                <td>
+                    @Html.DisplayFor(modelItem => item.firstName)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.fatherName)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.grandFatherName)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.age)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.gender)
+                </td>
+
+            </tr>
+        }
+</tbody>
+    
+</table>
+
+@section Scripts {
+    <script>
+        $(function () {
+            $('#studentsList').DataTable();
+        });
+    </script>
+}
+
+

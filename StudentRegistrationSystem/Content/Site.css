@@ -1,0 +1,111 @@
+﻿body {
+    padding-top: 50px;
+    padding-bottom: 20px;
+}
+
+/* Set padding to keep content from hitting the edges */
+.body-content {
+    padding-left: 15px;
+    padding-right: 15px;
+    padding-top: 30px;
+}
+
+/* Override the default bootstrap behavior where horizontal description lists 
+   will truncate terms that are too long to fit in the left column 
+*/
+.dl-horizontal dt {
+    white-space: normal;
+}
+
+/* Set width on the form input elements since they're 100% wide by default */
+input,
+select,
+textarea {
+    max-width: 280px;
+    
+}
+
+.inputTheme{
+    /*background: transparent;
+    border: darkslategray;
+    border-bottom: 2px solid darkslategray;*/
+    
+}
+
+.textAreaTheme{
+    /*background: transparent;
+    border-color: darkslategray;*/
+    
+}
+
+.formpanel{
+    padding:50px 70px;
+}
+
+
+/*
+    Style for sidebar
+*/
+#sidebar-wrapper{
+    width: 0;
+    height: 100%;
+    position: fixed;
+    z-index: 1;
+    overflow-x: hidden;
+    /*background: #151515;*/
+    transition: 0.5s;
+    
+}
+
+#main-wrapper{
+    width: 100%;
+    padding-left: 30px;
+    padding-right: 30px;
+    position: absolute;
+    transition: 0.5s;
+}
+
+#wrapper.menuDisplayed #sidebar-wrapper{
+    width: 250px;
+    
+}
+
+#wrapper.menuDisplayed #main-wrapper{
+    padding-left: 280px;
+    
+}
+
+#menus .toggel-btn{
+    left: 30px;
+    top: 30px;
+}
+
+#menus .toggle-btn span {
+    display: block;
+    width: 30px;
+    height: 4px;
+    background: white;
+    margin: 4px 20px;
+}
+
+#sidebar-nav{
+    padding:0;
+    list-style: none;
+} 
+
+#sidebar-nav li{
+    text-indent: 20px;
+    line-height: 40px;
+}
+
+#sidebar-nav li a {
+    display: block;
+    text-decoration: none;
+    color: white;
+
+}
+
+#sidebar-nav li a:hover{
+    background: #151515;
+    opacity: 0.8;
+}

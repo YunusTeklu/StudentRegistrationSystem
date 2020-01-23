@@ -1,0 +1,144 @@
+﻿@model StudentRegistrationSystem.Models.Student
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<div>
+    <h2>Student Detail</h2>
+    <p>
+        @Html.ActionLink("Delete", "Delete", new { id = Model.id }, new { @class = "btn btn-primary float-right" })
+        @Html.ActionLink("Edit", "Edit", new { id = Model.id }, new { @class = "btn btn-primary float-right" })
+    </p>
+    <br>
+    <hr />
+    <div class="card text-white bg-primary" style="padding: 30px">
+        <div class="card-header ">
+            <h3 class="card-title">Student Information</h3>
+        </div>
+        <br />
+        <div class="row">
+            <div class="col-md-4">
+                <img class="img-thumbnail img-fluid float-md-right"
+                     style="height: 400px; width: 400px;"
+                     src="@Url.Action("getImage", new { id= Model.id} )" />
+            </div>
+            <div class="col-md-6">
+
+                <div class="card-body">
+                    <div class="row">
+                        <div class="col-md-3">
+                            @Html.DisplayNameFor(model => model.firstName)
+                        </div>
+
+                        <div class="col-md-9">
+                            @Html.DisplayFor(model => model.firstName)
+                        </div>
+
+                        <div class="col-md-3">
+                            @Html.DisplayNameFor(model => model.fatherName)
+                        </div>
+
+                        <div class="col-md-9">
+                            @Html.DisplayFor(model => model.fatherName)
+                        </div>
+
+                        <div class="col-md-3">
+                            @Html.DisplayNameFor(model => model.grandFatherName)
+                        </div>
+
+                        <div class="col-md-9">
+                            @Html.DisplayFor(model => model.grandFatherName)
+                        </div>
+
+                        <div class="col-md-3">
+                            @Html.DisplayNameFor(model => model.age)
+                        </div>
+
+                        <div class="col-md-9">
+                            @Html.DisplayFor(model => model.age)
+                        </div>
+
+                        <div class="col-md-3">
+                            @Html.DisplayNameFor(model => model.gender)
+                        </div>
+
+                        <div class="col-md-9">
+                            @Html.DisplayFor(model => model.gender)
+                        </div>
+
+                        <div class="col-md-3">
+                            @Html.DisplayNameFor(model => model.bio)
+                        </div>
+
+                        <div class="col-md-9">
+                            @Html.DisplayFor(model => model.bio)
+                        </div>
+
+                        <div class="col-md-3">
+                            @Html.DisplayNameFor(model => model.region)
+                        </div>
+
+                        <div class="col-md-9">
+                            @Html.DisplayFor(model => model.region)
+                        </div>
+
+                        <div class="col-md-3">
+                            @Html.DisplayNameFor(model => model.city)
+                        </div>
+
+                        <div class="col-md-9">
+                            @Html.DisplayFor(model => model.city)
+                        </div>
+
+                        <div class="col-md-3">
+                            @Html.DisplayNameFor(model => model.subcity)
+                        </div>
+
+                        <div class="col-md-9">
+                            @Html.DisplayFor(model => model.subcity)
+                        </div>
+
+                        <div class="col-md-3">
+                            @Html.DisplayNameFor(model => model.woreda)
+                        </div>
+
+                        <div class="col-md-9">
+                            @Html.DisplayFor(model => model.woreda)
+                        </div>
+
+                        <div class="col-md-3">
+                            @Html.DisplayNameFor(model => model.houseNo)
+                        </div>
+
+                        <div class="col-md-9">
+                            @Html.DisplayFor(model => model.houseNo)
+                        </div>
+
+                        <div class="col-md-3">
+                            @Html.DisplayNameFor(model => model.phoneNo)
+                        </div>
+
+                        <div class="col-md-9">
+                            @Html.DisplayFor(model => model.phoneNo)
+                        </div>
+
+                        <div class="col-md-3">
+                            @Html.DisplayNameFor(model => model.email)
+                        </div>
+
+                        <div class="col-md-9">
+                            @Html.DisplayFor(model => model.email)
+                        </div>
+
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+</div>
+<p>
+    @Html.ActionLink("Back to List", "Index")
+</p>
